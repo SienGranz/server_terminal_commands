@@ -1,0 +1,33 @@
+VIM TUTORIAL
+
+vim name.txt - create or open file in VIM
+
+:q! - exit VIM without save 
+
+:w - save file
+
+:wq or ZZ - save and exit VIM
+
+i - switch to insert mode before cursor
+
+a - insert mode after cursor
+
+ESC - go back to normal mode
+
+dd - delete current line
+
+yy - copy current line
+
+p - paste copied line
+
+/word - search by file
+
+u - undo last action
+
+Ctrl + r - redo undone action
+
+gg - go to the beginning of the file 
+
+G - go to the end of the file
+
+:set number - activate numeration of lines
