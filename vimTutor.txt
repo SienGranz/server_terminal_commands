@@ -1,4 +1,4 @@
-VIM TUTORIAL
+Welcome to the VIM TUTORIAL
 
 vim name.txt - create or open file in VIM
 
@@ -30,4 +30,3 @@ gg - go to the beginning of the file
 
 G - go to the end of the file
 
-:set number - activate numeration of lines
