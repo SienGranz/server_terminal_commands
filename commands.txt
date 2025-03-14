@@ -1,1 +1,46 @@
-dadsad
+ssh-keygen -R ip ------> delete old key
+
+ssh user@ip -----> connect by the SSH
+
+sudo adduser newuser -----> create user
+
+sudo usermod -aG sudo newuser -----> give sudo permission to user
+
+cat /etc/passwd | cut -d: -f1 -----> show all users
+
+passwd -----> change your user password
+
+sudo passwd user_name -----> change password for another user
+
+sudo apt update -----> Update package list
+
+sudo apt upgrade -----> Update all installed packages
+
+sudo apt install <package_name> -----> Install package
+
+sudo apt remove <package_name> -----> Delete package
+
+sudo apt autoremove -----> Remove unnecessary packages (dependencies)
+
+_________________________________________
+
+NGINX COMMANDS:
+
+sudo systemctl start nginx  # start server
+
+sudo systemctl stop nginx # stop server
+
+sudo systemctl enable nginx # add to autolaunch
+
+sudo systemctl status nginx # check status
+
+sudo systemctl restart nginx # restart
+
+sudo nginx -t  # check confiruration
+
+sudo nano /etc/nginx/sites-available/default # open configuration
+
+sudo netstat -tulnp | grep nginx - check on which port NGINX is working
+_________________________________________
+
+
