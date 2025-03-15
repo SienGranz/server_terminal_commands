@@ -24,23 +24,42 @@ sudo apt autoremove -----> Remove unnecessary packages (dependencies)
 
 _________________________________________
 
-NGINX COMMANDS:
+NGINX, MYSQL... (pachages)  COMMANDS:
 
-sudo systemctl start nginx  # start server
+sudo systemctl start package  # start package
 
-sudo systemctl stop nginx # stop server
+sudo systemctl stop package # stop package
 
-sudo systemctl enable nginx # add to autolaunch
+sudo systemctl enable package # add to autolaunch
 
-sudo systemctl status nginx # check status
+sudo systemctl status package # check status
 
-sudo systemctl restart nginx # restart
+sudo systemctl restart package  # restart
 
 sudo nginx -t  # check confiruration
 
-sudo nano /etc/nginx/sites-available/default # open configuration
+sudo nano /etc/nginx/sites-available/default # open configuration nginx
 
 sudo netstat -tulnp | grep nginx - check on which port NGINX is working
 _________________________________________
+
+sudo cp yourfile.html /var/www/html/index.htm # copy html file into server
+
+sudo nano /var/www/html/index.html # create file into server
+
+_________________________________________
+
+MYSQL
+
+sudo mysql_secure_installation - security sql installation
+
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf - mysql configuration
+
+"change bind_adress 127.0.0.1 --> 0.0.0.0"
+
+sudo mysql -u root -p --> to connect to mysql
+
+
+
 
 
