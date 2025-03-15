@@ -64,8 +64,37 @@ ___________________________________________
 How to install WordPress?
 
 - install: nginx, mysql, php
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install nginx mysql-server php-fpm php-mysql php-cli php-curl php-xml php-mbstring unzip -y
+
+
 - create DB and user for wordpress 
+
+sudo mysql -u root -p
+
+CREATE DATABASE wordpress;
+CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'strong_password';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wp_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+
 - download and install WordPress
-- change configuration of WordPress
-- chabge configuration of server 
+
+wget https://wordpress.org/wordpress-6.4.3.tar.gz
+
+tar -xvf wordpress-*.tar.gz # unzip 
+
+rm wordpress-*.tar.gz
+
+rm /var/www/html/* #clear directory
+
+sudo chown -R www-data:www-data /var/www/html/
+sudo chmod -R 755 /var/www/html/ # give access rights
+
+
+- chabge configuration of server
+
+add index.php  
  
