@@ -59,7 +59,13 @@ sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf - mysql configuration
 
 sudo mysql -u root -p --> to connect to mysql
 
+___________________________________________
 
+How to install WordPress?
 
-
-
+- install: nginx, mysql, php
+- create DB and user for wordpress 
+- download and install WordPress
+- change configuration of WordPress
+- chabge configuration of server 
+ 
