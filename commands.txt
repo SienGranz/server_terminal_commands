@@ -97,4 +97,39 @@ sudo chmod -R 755 /var/www/html/ # give access rights
 - chabge configuration of server
 
 add index.php  
- 
+
+_______________________________________
+
+HOW TO ADD WEBSITE TO DOMEN
+
+1) create a dir in var/www
+
+sudo touch var/www/mynewsite.com
+
+2) change rights 
+sudo chown -R www-data:www-data /var/www/mynewsite.com
+sudo chmod -R 755 /var/www/mynewsite.com
+
+3) create config
+sudo nano /etc/nginx/sites-available/mynewsite.com
+4) change config
+
+server {
+    listen 80;
+    server_name mynewsite.com www.mynewsite.com;
+
+    root /var/www/mynewsite.com;
+    index index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+
+5) create link for website
+sudo ln -s /etc/nginx/sites-available/mynewsite.com /etc/nginx/sites-enabled/
+
+6) check config 
+sudo nginx -t
+7)sudo systemctl restart nginx
+________________________________________________________
